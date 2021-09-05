@@ -127,7 +127,9 @@ class _ScreenOneState extends State<ScreenOne> {
                 ],
               ),
               ElevatedButton(
-                style: ButtonStyle(),
+                style: ButtonStyle(
+                  backgroundColor:  _image == null ? MaterialStateProperty.all(Colors.red) : MaterialStateProperty.all(Colors.blue),
+                ),
                   child: Text(
                     _image == null ?"Capture Image": "Recapture Image",
                     style: TextStyle(color: Colors.white),
@@ -141,7 +143,7 @@ class _ScreenOneState extends State<ScreenOne> {
                     height: 120,
                   );
                 } else {
-                  return Text("select Image");
+                  return Text("Select Image");
                 }
               }),
               ElevatedButton(
